@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://medr3f7d8mqa"]
+[gd_scene load_steps=5 format=3 uid="uid://medr3f7d8mqa"]
 
 [ext_resource type="Texture2D" uid="uid://bbueh1u353fa3" path="res://icon.svg" id="1_vqps8"]
 [ext_resource type="PackedScene" uid="uid://c0gvqdjytochq" path="res://player.tscn" id="2_i7egd"]
+[ext_resource type="PackedScene" path="res://torches.tscn" id="3_i7egd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27reu"]
 size = Vector2(1226.5, 239)
@@ -21,3 +22,6 @@ shape = SubResource("RectangleShape2D_27reu")
 
 [node name="Player" parent="." instance=ExtResource("2_i7egd")]
 position = Vector2(79, -99)
+
+[node name="Torches" parent="." instance=ExtResource("3_i7egd")]
+position = Vector2(176, -91)

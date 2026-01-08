@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddftgtojnm6dw"]
+[gd_scene load_steps=10 format=3 uid="uid://cf8l6tlvhmxl2"]
 
 [ext_resource type="Texture2D" uid="uid://bfvrkm3wthnk6" path="res://Assets/torch_anim.png" id="1_7v7gu"]
 [ext_resource type="Script" uid="uid://de3uwd81est40" path="res://torches.gd" id="1_isy3s"]
@@ -56,6 +56,7 @@ animations = [{
 
 [node name="Torches" type="StaticBody2D"]
 position = Vector2(0, -6)
+scale = Vector2(3, 3)
 script = ExtResource("1_isy3s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -66,6 +67,6 @@ shape = SubResource("RectangleShape2D_isy3s")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qg6j3")
 animation = &"Torch_default"
-frame_progress = 0.07926815
+frame_progress = 0.72169673
 
 [node name="Camera2D" type="Camera2D" parent="."]
