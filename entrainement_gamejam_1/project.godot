@@ -11,7 +11,5 @@ config_version=5
 [application]
 
 config/name="jour-nuit"
-run/main_scene="uid://medr3f7d8mqa"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
-<<<<<<<HEADrun/main_scene="uid://medr3f7d8mqa"
