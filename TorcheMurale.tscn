@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://esseuxurnshv"]
+
+[ext_resource type="Texture2D" uid="uid://xoqqqpydgt0o" path="res://vecteezy_set-of-medieval-sprite-torches-with-burning-fire_14400830.jpg" id="1_801sk"]
+
+[node name="Torch" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_801sk")
+hframes = 7
+frame = 6
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]

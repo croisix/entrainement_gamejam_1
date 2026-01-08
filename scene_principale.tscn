@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://medr3f7d8mqa"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Torch" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
