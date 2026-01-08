@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://6oiuuea2ves1"]
+[gd_scene load_steps=2 format=3 uid="uid://6oiuuea2ves1"]
+
+[ext_resource type="PackedScene" uid="uid://ddftgtojnm6dw" path="res://torches.tscn" id="1_hmrk6"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Torches" parent="." instance=ExtResource("1_hmrk6")]
