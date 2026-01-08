@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://ddftgtojnm6dw"]
+
+[ext_resource type="Texture2D" uid="uid://bfvrkm3wthnk6" path="res://Assets/torch_anim.png" id="1_7v7gu"]
+[ext_resource type="Script" uid="uid://de3uwd81est40" path="res://torches.gd" id="1_isy3s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isy3s"]
+size = Vector2(8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14psq"]
+atlas = ExtResource("1_7v7gu")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdyc8"]
+atlas = ExtResource("1_7v7gu")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwd1d"]
+atlas = ExtResource("1_7v7gu")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0y35"]
+atlas = ExtResource("1_7v7gu")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yo8jc"]
+atlas = ExtResource("1_7v7gu")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qg6j3"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Torch_Shut",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14psq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdyc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwd1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0y35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yo8jc")
+}],
+"loop": true,
+"name": &"Torch_default",
+"speed": 5.0
+}]
+
+[node name="Torches" type="StaticBody2D"]
+position = Vector2(0, -6)
+script = ExtResource("1_isy3s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_isy3s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_qg6j3")
+animation = &"Torch_default"
+frame_progress = 0.07926815
+
+[node name="Camera2D" type="Camera2D" parent="."]
